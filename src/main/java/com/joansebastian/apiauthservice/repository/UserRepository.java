@@ -1,0 +1,8 @@
+package com.joansebastian.apiauthservice.repository;
+
+import com.joansebastian.apiauthservice.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+}
